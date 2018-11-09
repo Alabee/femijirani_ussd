@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'femijirani.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nlypxknf',
+        'HOST': 'baasu.db.elephantsql.com',
+        'USER': 'nlypxknf',
+        'PASSWORD': 'VloxAgQGYm12Q2evFGjCVWZKY1AjKRf6',
+        'PORT': '5432',
     }
 }
 
