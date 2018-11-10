@@ -9,16 +9,18 @@ class Donor(models.Model):
 		return self.phoneNumber
 
 class Jirani(models.Model):
-	firstName = models.CharField(max_length=20)
-	lastName = models.CharField(max_length=20)
-	ID = models.CharField(max_length=20)
-	DOB = models.CharField(max_length=20)
-	phoneNumber = models.CharField(max_length=20)
-	county = models.CharField(max_length=20)
-	town = models.CharField(max_length=20)
-	estate = models.CharField(max_length=20)
-	landmark = models.CharField(max_length=20)
-	piecesRequested = models.CharField(max_length=20)
+	firstName = models.CharField(max_length=255)
+	lastName = models.CharField(max_length=255)
+	ID = models.CharField(max_length=255)
+	phoneNumber = models.CharField(max_length=255)
+	county = models.CharField(max_length=255)
+	town = models.CharField(max_length=255)
+	estate = models.CharField(max_length=255)
+	landmark = models.CharField(max_length=255)
+	peopleApplied = models.CharField(max_length=255)#will be sorted to be in a different table
 
 	def __str__(self):
 		return self.firstName
+
+
+#The max_length limits should be revised

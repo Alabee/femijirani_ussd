@@ -30,6 +30,8 @@ def index(request):
 	elif text == "2":
 		response = "CON Please enter the following details\nFirst name"
 
+	elif text != "1" or "2":
+		response = "END Thank you for visiting Femi-jirani"
 	#level 3
 	elif user_responses[1] != "" and len(user_responses) == 2:
 		if user_responses[0] == "1":
@@ -76,12 +78,24 @@ def index(request):
 	#SAVING DATA TO DATABASE
 	if user_responses[0] == "1":
 		if len(user_responses) == 3:
-			amount = user_responses[1]
 			donor = Donor()
 			donor.phoneNumber = phoneNumber
-			donor.amount = amount
+			donor.amount = user_responses[1]
 			donor.save()
 
-	
+	elif user_responses[0] == "2":
+		if len(user_responses) == 9:
+			jirani = Jirani()
+			jirani.firstName = user_responses[1]
+			jirani.lastName = user_responses[2]
+			jirani.ID = user_responses[3]
+			jirani.peopleApplied = user_responses[4]
+			jirani.phoneNumber = phoneNumber
+			jirani.county = user_responses[5]
+			jirani.town = user_responses[6]
+			jirani.estate = user_responses[7]
+			jirani.landmark = user_responses[8]
+			jirani.save()
+			
 
 	return HttpResponse(response, content_type="text/plain")
