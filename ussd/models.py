@@ -2,8 +2,11 @@ from django.db import models
 
 # Create your models here.
 class Donor(models.Model):
-	phoneNumber = models.CharField(max_length=10)
-	amount = models.CharField(max_length=20)
+	phoneNumber = models.CharField(max_length=255)
+	amount = models.CharField(max_length=255)
+
+	def __str__(self):
+		return self.phoneNumber
 
 class Jirani(models.Model):
 	firstName = models.CharField(max_length=20)
@@ -16,3 +19,6 @@ class Jirani(models.Model):
 	estate = models.CharField(max_length=20)
 	landmark = models.CharField(max_length=20)
 	piecesRequested = models.CharField(max_length=20)
+
+	def __str__(self):
+		return self.firstName

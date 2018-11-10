@@ -2,6 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
+
+#importing tables to save data
+from .models import Donor, Jirani
+
+
 # Create your views here.
 
 @csrf_exempt
@@ -67,5 +72,16 @@ def index(request):
 
 	else:
 		response = "END Thank you for visiting Femi-jirani!"
+
+	#SAVING DATA TO DATABASE
+	if user_responses[0] == "1":
+		if len(user_responses) == 3:
+			amount = user_responses[1]
+			donor = Donor()
+			donor.phoneNumber = phoneNumber
+			donor.amount = amount
+			donor.save()
+
+	
 
 	return HttpResponse(response, content_type="text/plain")
