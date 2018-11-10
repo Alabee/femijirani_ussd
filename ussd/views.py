@@ -43,22 +43,26 @@ def index(request):
 	
 	#level 5
 	elif user_responses[3] != "" and len(user_responses) == 4:
-		response = "CON Help us establish your location\nCounty"
-	
+		response = "CON How many people are you applying for?"
+
 	#level 6
 	elif user_responses[4] != "" and len(user_responses) == 5:
-		response = "CON Town"
-
+		response = "CON Help us establish your location\nCounty"
+	
 	#level 7
 	elif user_responses[5] != "" and len(user_responses) == 6:
-		response = "CON Estate/Village"
+		response = "CON Town"
 
 	#level 8
 	elif user_responses[6] != "" and len(user_responses) == 7:
-		response = "CON Nearest landmark(Primary school/secondary school/hospital/local church"
+		response = "CON Estate/Village"
 
 	#level 9
 	elif user_responses[7] != "" and len(user_responses) == 8:
+		response = "CON Nearest landmark(Primary school/secondary school/hospital/local church"
+
+	#level 10
+	elif user_responses[8] != "" and len(user_responses) == 9:
 		response = "END Your application has been received.\n Confirmation will be sent to you via text."
 
 	else:
