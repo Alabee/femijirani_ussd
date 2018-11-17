@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ussd/', views.index),
     path('', include('web.urls')),
+    path('data/', include('endpoint.urls')),
 ]

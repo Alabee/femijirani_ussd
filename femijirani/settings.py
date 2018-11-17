@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['72660c03.ngrok.io', '127.0.0.1']
 INSTALLED_APPS = [
     'ussd',
     'web',
+    'endpoint',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
