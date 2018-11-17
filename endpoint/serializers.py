@@ -1,7 +1,7 @@
-from rest_framework import serializer
+from rest_framework import serializers
 from ussd.models import Jirani
 
-class JiraniSeriaizer(serializers.ModelSerializer):
+class JiraniSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Jirani
