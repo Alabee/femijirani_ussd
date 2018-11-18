@@ -3,7 +3,8 @@ from rest_framework.views import APIView #APIView makes the normal views return 
 from rest_framework.response import Response
 from rest_framework import status
 from ussd.models import Jirani
-from .serializers import JiraniSerializer
+from web.models import AgentCredential
+from .serializers import JiraniSerializer, AgentCredentialSerializer
 from django.http import HttpResponse
 
 # Create your views here.
@@ -19,6 +20,18 @@ class JiraniList(APIView):
 
 		return Response(serializer.data)
 
+
+	def post(self):
+		pass
+
+class AgentCredential(APIView):
+
+	def get(self, request):
+		username = request.GET.get('username')
+		agent = AgentCredential.objects.filter(username = username)
+		serializer = AgentCredentialSerializer(agent)
+
+		return Response(serializer.data)
 
 	def post(self):
 		pass
