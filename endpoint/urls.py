@@ -4,7 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path('jirani/', views.JiraniList.as_view()),
+    path('jirani/', views.JiraniList.as_view(), name="jirani"),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
