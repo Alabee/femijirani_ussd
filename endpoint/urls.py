@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     path('jirani/', views.JiraniList.as_view(), name="jirani"),
-    path('agent/', views.AgentCredential.as_view(), name="agent"),
+    path('agent/', views.AgentCredentialDetail.as_view(), name="agent"),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
