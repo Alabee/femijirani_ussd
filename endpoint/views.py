@@ -13,7 +13,8 @@ from django.http import HttpResponse
 class JiraniList(APIView):
 
 	def get(self, request):
-		jiranis = Jirani.objects.all()
+		query = request.GET.get('name')
+		jiranis = Jirani.objects.filter(firstName = query)
 		serializer = JiraniSerializer(jiranis, many = True)
 
 		return Response(serializer.data)
