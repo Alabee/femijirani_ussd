@@ -11,7 +11,7 @@ class Agent(models.Model):
 	def __str__(self):
 		return self.agent_id + ":" + self.firstName
 
-class AgentCredentials(models.Model):
+class AgentCredential(models.Model):
 	agent = models.ForeignKey(Agent, on_delete = models.CASCADE)
 	username = models.CharField(max_length=10)
 	password = models.CharField(max_length=10)
