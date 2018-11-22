@@ -30,8 +30,6 @@ def index(request):
 	elif text == "2":
 		response = "CON Please enter the following details\nFirst name"
 
-	elif text != "1" or "2":
-		response = "END Thank you for visiting Femi-jirani"
 	#level 3
 	elif user_responses[1] != "" and len(user_responses) == 2:
 		if user_responses[0] == "1":
@@ -99,3 +97,10 @@ def index(request):
 			
 
 	return HttpResponse(response, content_type="text/plain")
+
+
+	'''
+	elif len(user_responses) == 1 and text != "1" or "2":
+		response = "END Thank you for visiting Femi-jirani"
+
+'''
