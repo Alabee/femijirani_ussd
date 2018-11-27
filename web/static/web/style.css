@@ -1,5 +1,7 @@
 {% load static %}
 
 body{
-	background: blue;
+	background: #fff;
 }
+
+#mapid { height: 400px; }
