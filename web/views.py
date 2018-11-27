@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-	return HttpResponse("Homepage")
+	return render(request, 'web/home.html')
 
 def donate(request):
 	return HttpResponse("Donate page working!")
