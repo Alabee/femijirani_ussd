@@ -34,10 +34,10 @@ body{
 	background-color: #E1BEE7;
 	border-color: #E1BEE7;
 }
-#mapid { height: 400px; }
+#mapid { 
+	height: 100vh; 
+}
 
 .carousel-item img{
     max-width: 100%;
     max-height: 100vh;
-    height: auto;
-}

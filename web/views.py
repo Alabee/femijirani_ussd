@@ -6,4 +6,4 @@ def index(request):
 	return render(request, 'web/home.html')
 
 def donate(request):
-	return HttpResponse("Donate page working!")
+	return render(request, 'web/donate.html')
