@@ -27,8 +27,8 @@ class JiraniList(APIView):
 class AgentCredentialDetail(APIView):
 
 	def get(self, request):
-		username = request.GET.get('username')
-		agent = AgentCredential.objects.filter(username = username)
+		#username = request.GET.get('username')
+		agent = AgentCredential.objects.all()
 		serializer = AgentCredentialSerializer(agent, many = True)
 
 		return Response(serializer.data)
