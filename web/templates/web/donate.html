@@ -9,20 +9,43 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="{% static 'web/style.css' %}" type="text/css">
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
-		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+		 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+		 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
 
 		<title>Home</title>
 	</head>
 	<body>
-		<h1>Welcome to Femijirani</h1>
-		 <div id="mapid"></div>
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top container">
+		 	<a class="navbar-brand" href="#">FemiJirani</a>
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    	<ul class="navbar-nav ml-auto">
+		      		<li class="nav-item active">
+		        		<a class="nav-link" href="#"><button type="button" class="btn btn-outline-danger">Home</button></a>
+		      		</li>
+		      		<li class="nav-item">
+		        		<a class="nav-link" href="#"><button type="button" class="btn btn-outline-danger">Donate</button></a>
+		      		</li>
+		    	</ul>
+		  	</div>
+		</nav>
+		<div id="mapid"></div>
 
 		 <script language="javascript">
 		 	var map = L.map('mapid', {
-    			center: [51.505, -0.09],
+    			center: [0.0236, 37.9062],
     			zoom: 13
 				});
+		 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			    }).addTo(map);
 		 </script>
  	</body>
 </html>
