@@ -27,11 +27,21 @@ class JiraniList(APIView):
 class AgentCredentialDetail(APIView):
 
 	def get(self, request):
-		#username = request.GET.get('username')
 		agent = AgentCredential.objects.all()
 		serializer = AgentCredentialSerializer(agent, many = True)
 
 		return Response(serializer.data)
 
-	def post(self):
-		pass
+	def post(self, request):
+		username = request.POST.get('username')
+		password = request.POST.get('password')
+		
+		user = AgentCredential.objects.get(username=username)
+
+		if password == user.password:
+			return HttpResponse("Access granted")
+
+		else:
+			return HttpResponse("Access denied")
+
+
