@@ -36,12 +36,16 @@ class AgentCredentialDetail(APIView):
 		username = request.POST.get('username')
 		password = request.POST.get('password')
 		
-		user = AgentCredential.objects.get(username=username)
+		
+		if AgentCredential.objects.filter(username=username).exists():
+			user = AgentCredential.objects.get(username=username)
+			
+			if password == user.password:
+				return HttpResponse("Access granted")
 
-		if password == user.password:
-			return HttpResponse("Access granted")
-
+			else:
+				return HttpResponse("Wrong password")
 		else:
-			return HttpResponse("Access denied")
+			return HttpResponse("User does not exist")
 
 
