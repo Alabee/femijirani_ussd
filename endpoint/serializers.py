@@ -13,4 +13,4 @@ class AgentCredentialSerializer(serializers.ModelSerializer):
 
 	class Meta: 
 		model = AgentCredential
-		fields = '__all__'
+		fields = ("username", "password")
