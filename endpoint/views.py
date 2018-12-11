@@ -6,6 +6,7 @@ from ussd.models import Jirani
 from web.models import AgentCredential
 from .serializers import JiraniSerializer, AgentCredentialSerializer
 from django.http import HttpResponse
+from django.contrib.auth import authenticate,login
 
 # Create your views here.
 # Setting up a class-based view allows factoring in different types of request for the same thing(POST or GET)
@@ -36,7 +37,10 @@ class AgentCredentialDetail(APIView):
 		username = request.POST.get('username')
 		password = request.POST.get('password')
 		
-		
+		user = (username, password)
+		login(request, user)
+
+		'''
 		if AgentCredential.objects.filter(username=username).exists():
 			user = AgentCredential.objects.get(username=username)
 			
@@ -47,5 +51,5 @@ class AgentCredentialDetail(APIView):
 				return HttpResponse("Wrong password")
 		else:
 			return HttpResponse("User does not exist")
-
+		'''
 
