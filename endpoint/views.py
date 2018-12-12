@@ -37,9 +37,10 @@ class AgentDetail(APIView):
 		username = request.POST.get('username')
 		password = request.POST.get('password')
 		
-		user = (username, password)
+		user = authenticate(username=username, password=password)
 		login(request, user)
 
+		return HttpResponse("Working")
 		'''
 		if AgentCredential.objects.filter(username=username).exists():
 			user = AgentCredential.objects.get(username=username)
