@@ -3,11 +3,11 @@ from rest_framework.views import APIView #APIView makes the normal views return 
 from rest_framework.response import Response
 from rest_framework import status
 from ussd.models import Jirani
-from web.models import AgentCredential
-from .serializers import JiraniSerializer, AgentCredentialSerializer
+from web.models import Agent
+from .serializers import JiraniSerializer, AgentSerializer
 from django.http import HttpResponse
 from django.contrib.auth import authenticate,login
-
+from django.contrib.auth.models import User
 # Create your views here.
 # Setting up a class-based view allows factoring in different types of request for the same thing(POST or GET)
 
@@ -25,11 +25,11 @@ class JiraniList(APIView):
 	def post(self):
 		pass
 
-class AgentCredentialDetail(APIView):
+class AgentDetail(APIView):
 
 	def get(self, request):
-		agent = AgentCredential.objects.all()
-		serializer = AgentCredentialSerializer(agent, many = True)
+		agent = User.objects.all()
+		serializer = AgentSerializer(agent, many = True)
 
 		return Response(serializer.data)
 
