@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        
+        {% if form.errors %}
+        <p>There are errors in the form!</p>
+        {% endif %}
+
+        <p>Username: {{ form.username }}</p>
+        <p>First name: {{ form.first_name }} </p>
+        <p>Last name: {{ form.last_name }} </p>
+        <p>Email: {{ form.email }}</p>
+        <p>Password: {{ form.password1}}</p>
+        <p>Please re-renter your password for confirmation:</p>
+        <p>Password: {{ form.password2 }}</p>
+
+        <input type="submit" value="Register">
+
+    </form>
+</body>
+</html>
