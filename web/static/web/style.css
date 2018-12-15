@@ -1,5 +1,5 @@
 body{
-	background: #fff;
+	background: url("/static/web/images/3.jpg");
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: .9em;
 }
@@ -33,11 +33,14 @@ body{
 
  /* End of carousel */
 
-.part1{
-	background-image: url(% static 'web/images/part1.jpg' %);
+#about{
+	background-image:url('/static/images/part1.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #about{
+	background-image:url('../static/web/images/2.jpg');
 	text-align: center;
 	line-height: 30px;
 }
