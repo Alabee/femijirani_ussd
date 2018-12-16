@@ -13,12 +13,12 @@
 
 		<!-- Site CSS -->
 		<link rel="stylesheet" href="{% static 'web/style.css' %}" type="text/css">
-
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
 		<title>Home</title>
 	</head>
 	<body>
-		<section class="container-fluid part1" id="part1">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div>
+			<nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light">
 			  	<a class="navbar-brand" href="#">FemiJirani</a>
 			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -54,9 +54,7 @@
 	      				<img class="d-block w-100" src="{% static 'web/images/1.jpg' %}" alt="First slide">
 	      				  	<div class="carousel-caption d-none d-md-block">
 						  		<h5>Did you know?</h5>
-						    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						    	quis nostrud exercitation ullamco </p>
+						    	<p>In many countries like Kenya, a lack of access to sanitary pads causes girls to miss up to 6 weeks of school a year.</p>
   							</div>
 	    			</div>
 	    			<div class="carousel-item">
@@ -87,22 +85,27 @@
 			    	<span class="sr-only">Next</span>
 			  	</a>
 			</div>
-			<div class="container" id="about">
-				<h1>About</h1>
-    			<p>This is a modified jumbotron that occupies the entire horizontal space of its parent. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+			<div class="container-fluid row" id="about">
+  				<div class="col-md-3 embed-responsive embed-responsive-16by9">
+  					<iframe class="video" width="1416" height="804" src="https://www.youtube.com/embed/FMKo3k3giAA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  				</div>
+  				<div class="col-md-9">
+					<h1>About</h1>
+	    			<p><span>F</span>emiJirani is a donation platform that This is a modified jumbotron that occupies the entire horizontal space of its parent. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  				</div>
 			</div>
-		</section>
+
+		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
